@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PlaceDetails"
+    android:id="@+id/scrollView"
+    tools:showIn="@layout/activity_place_details"
+    android:layout_height="match_parent"
+    android:paddingBottom="?actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="1dp"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/card"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/image_c"
+                    android:layout_height="220dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@drawable/user"
+                        android:id="@+id/image"
+                        android:visibility="gone"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent" />
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:auto_cycle="true"
+
+                        app:pager_animation="Accordion">
+
+                    </com.daimajia.slider.library.SliderLayout>
+                    <com.daimajia.slider.library.Indicators.PagerIndicator
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/indicator"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        app:selected_color="@color/colorAccent"
+                        app:unselected_color="@color/colorAccent"
+                        app:selected_drawable="@drawable/ic_dove"
+                        app:shape="oval"
+                        app:selected_padding_left="6dp"
+                        app:selected_padding_right="6dp"
+                        app:unselected_padding_left="2dp"
+                        app:unselected_padding_right="2dp"
+                        app:selected_width="6dp"
+                        app:selected_height="6dp"
+                        app:unselected_width="6dp"
+                        app:unselected_height="6dp"
+                        />
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/image_c"
+                    android:id="@+id/name_c"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/more_btn"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="7"
+                            android:id="@+id/name"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="Smburu Greens"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Ksh."
+                                android:id="@+id/currency"
+                                android:textSize="@dimen/text_small"
+                                android:textColor="@color/secondary_txt"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="10,000"
+                                android:textColor="@color/greenish"
+                                android:id="@+id/price"
+                                android:layout_margin="4dp"
+                                android:textSize="@dimen/text_small"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="p.m"
+                                android:id="@+id/quotation"
+                                android:textSize="@dimen/text_small"
+                                android:textColor="@color/secondary_txt"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/name_c"
+                    android:id="@+id/a"
+                    android:padding="4dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="4dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_bedroom"
+                            android:id="@+id/i"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="2"
+                            android:id="@+id/bedrooms"
+                            android:layout_toRightOf="@id/i"
+                            android:textColor="@color/greenish"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:textSize="14sp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_bathroom"
+                            android:id="@+id/ii"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="2"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/bathrooms"
+                            android:layout_toRightOf="@id/ii"
+                            android:textColor="@color/greenish"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:paddingRight="4dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/ic_area"
+                            android:id="@+id/iii"
+                            android:layout_gravity="center_vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="2 sqft"
+                            android:id="@+id/area"
+                            android:layout_toRightOf="@id/iii"
+                            android:textColor="@color/greenish"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:textSize="14sp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/a"
+                    android:id="@+id/divider"
+                    android:background="@color/divider"
+                    android:layout_height=".8dp"/>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/like_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:contentPadding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ViewSwitcher
+                            android:id="@+id/likes_icon_switcher"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                            android:inAnimation="@anim/slide_in_likes_counter"
+                            android:outAnimation="@anim/slide_out_likes_counter">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:id="@+id/unlike_btn"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_like_outline" />
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:id="@+id/like_btn"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_like_fill" />
+                        </ViewSwitcher>
+
+                        <ViewSwitcher
+                            android:id="@+id/like_txt_view_switcher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:inAnimation="@anim/slide_in_likes_counter"
+                            android:outAnimation="@anim/slide_out_likes_counter">
+
+                            <TextView
+                                android:id="@+id/like_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/like_txt_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="120"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="12sp" />
+                        </ViewSwitcher>
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:visibility="gone"
+                            android:layout_gravity="center_vertical"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_chat"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="1.5k"
+                            android:visibility="gone"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_txt"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignBottom="@id/like_holder"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Jun 9"
+                        android:id="@+id/posted"
+                        android:layout_margin="4dp"
+                        android:textSize="@dimen/text_small"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/desc_c"
+            app:cardElevation=".5dp"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="8dp"
+            android:layout_margin="4dp"
+            android:layout_below="@id/card"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Description"
+                    android:id="@+id/desc_tt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_normal"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_below="@id/desc_c"
+            android:id="@+id/loc_c"
+            app:cardCornerRadius="5dp"
+            app:cardElevation=".5dp"
+            app:contentPadding="8dp"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large"
+                    android:layout_height="wrap_content" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <fragment
+                        android:layout_width="match_parent"
+                        android:id="@+id/map"
+                        app:mapType="normal"
+                        app:uiCompass="false"
+                        app:uiScrollGestures="true"
+                        app:uiZoomControls="true"
+                        app:uiZoomGestures="true"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:background="#0000"
+                        android:id="@+id/transparent_image"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_below="@id/loc_c"
+            app:cardElevation="1dp"
+            android:id="@+id/amenities_c"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="8dp"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Amenities"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    android:id="@+id/amenities_view"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

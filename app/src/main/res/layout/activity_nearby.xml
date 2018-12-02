@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NearbyActivity"
+   >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:elevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:id="@+id/back_btn"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/robotomedium"
+                android:text="Nearby"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        app:mapType="normal"
+        app:uiCompass="false"
+        app:uiScrollGestures="true"
+        app:uiZoomControls="true"
+        app:uiZoomGestures="true"
+        android:layout_below="@id/appbar"
+        android:layout_height="match_parent"
+         />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:id="@+id/details_c"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:id="@+id/image_c"
+            app:cardElevation="1dp"
+            app:cardCornerRadius="4dp"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100dp"
+                android:id="@+id/image"
+                android:scaleType="centerCrop"
+                android:layout_height="80dp" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_alignTop="@id/image_c"
+            android:layout_toRightOf="@id/image_c"
+            android:id="@+id/name"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginRight="8dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Ksh."
+            android:id="@+id/c"
+            android:layout_alignBottom="@id/image_c"
+            android:layout_toRightOf="@id/image_c"
+            android:textColor="@color/secondary_light"
+            android:textSize="@dimen/text_small"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text=" 20,000"
+            android:id="@+id/price"
+            android:layout_alignBottom="@id/image_c"
+            android:layout_toRightOf="@id/c"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/greenish"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text=" p.m"
+            android:layout_toRightOf="@id/price"
+            android:layout_alignBottom="@id/image_c"
+            android:id="@+id/period"
+            android:textColor="@color/secondary_light"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@id/image_c"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:text="View"
+            android:id="@+id/view_btn"
+            android:background="@drawable/white_btn"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+</RelativeLayout>

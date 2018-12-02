@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "860636767018",
+    "firebase_url": "https://spare-ddfd2.firebaseio.com",
+    "project_id": "spare-ddfd2",
+    "storage_bucket": "spare-ddfd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860636767018:android:5d618184289c1b24",
+        "android_client_info": {
+          "package_name": "com.joseph.spare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860636767018-t78noirkm1rfv00e2vjrkvkqcng3qgei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joseph.spare",
+            "certificate_hash": "e9d8d6a16c091bd9b23446dbd98d5821655e6ce0"
+          }
+        },
+        {
+          "client_id": "860636767018-i6bmg08jcvtq2vu6rp0rvh0fa0pt2tpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBklU2OP5iiMKD2tkHCP-sMT0q8cno2YUo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860636767018-i6bmg08jcvtq2vu6rp0rvh0fa0pt2tpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

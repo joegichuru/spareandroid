@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+
+            <solid android:color="#00eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+
+            <solid android:color="#05eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+
+            <solid android:color="#10eeeeee" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+            <solid android:color="#15eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+            <solid android:color="#20eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+            <solid android:color="#25eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+            <solid android:color="#30eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+            <solid android:color="#35eeeeee" />
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right=".3dp"
+                android:top=".3dp" />
+
+            <solid android:color="#40eeeeee" />
+
+        </shape>
+    </item>
+
+
+    <!-- Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+
+        </shape>
+    </item>
+
+</layer-list>
